@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divergências Futuristas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Verificação de Divergências</h1>
+        <form id="divergenciaForm">
+            <label for="divergencia" class="label">Me fale a divergência:</label>
+            <div class="input-container">
+                <input type="text" id="divergencia" class="input" placeholder="Digite a divergência">
+            </div>
+            <button type="button" onclick="inicio()" class="button">Verificar</button>
+        </form>
+        <p id="resultado" class="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
