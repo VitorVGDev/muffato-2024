@@ -3,24 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divergências Futuristas</title>
+    <title>Verificação Central de Notas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Verificação de Divergências</h1>
-        <form id="divergenciaForm">
-            <label for="divergencia" class="label">Me fale a divergência:</label>
-            <div class="input-container">
-                <input type="text" id="divergencia" class="input" placeholder="Digite a divergência">
-            </div>
-            <button type="button" onclick="inicio()" class="button">Verificar</button>
-        </form>
-        <p id="resultado" class="result"></p>
+    <!-- Ícone de casinha no canto superior esquerdo -->
+    <div class="home-icon" onclick="voltarPaginaInicial()">
+        <i class="fas fa-home"></i>
     </div>
+
+    <div class="container">
+        <!-- Página Inicial -->
+        <div id="paginaInicial" class="pagina active">
+            <h1 class="title">Como eu posso te ajudar?</h1>
+            <button onclick="mostrarPagina('paginaCentroFilial')" class="button">Descobrir quem marcar</button>
+            <button onclick="mostrarPagina('paginaObservacao')" class="button">Verificar observação da nota</button>
+        </div>
+
+        <!-- Página de Solicitação de Centro/Filial -->
+        <div id="paginaCentroFilial" class="pagina">
+            <h1 class="title">Informe o Centro/Filial da Nota</h1>
+            <form id="centroFilialForm" onsubmit="verificarCentroFilial(); return false;">
+                <label for="centroFilial" class="label">Centro/Filial da nota:</label>
+                <div class="input-container">
+                    <input type="text" id="centroFilial" class="input" placeholder="Digite o Centro/Filial">
+                </div>
+                <button type="button" onclick="verificarCentroFilial()" class="button">Verificar</button>
+            </form>
+            <button onclick="voltarPaginaInicial()" class="button">Voltar</button>
+        </div>
+
+        <!-- Página de Descobrir quem marcar -->
+        <div id="paginaMarcar" class="pagina">
+            <h1 class="title">Verificação de Divergências</h1>
+            <form id="marcarForm" onsubmit="verificarItem(); return false;">
+                <label for="itemNota" class="label">Qual item está vindo na nota?</label>
+                <div class="input-container">
+                    <input type="text" id="itemNota" class="input" placeholder="Digite o item da nota">
+                </div>
+                <button type="button" onclick="verificarItem()" class="button">Verificar</button>
+            </form>
+            <p id="resultadoMarcar" class="result"></p>
+            <p id="resultadoGestor" class="result"></p>
+            <button onclick="voltarPaginaInicial()" class="button">Voltar</button>
+        </div>
+
+        <!-- Página de Verificação de Observação -->
+        <div id="paginaObservacao" class="pagina">
+            <h1 class="title">Verificação de Observações</h1>
+            <form id="observacaoForm" onsubmit="inicio(); return false;">
+                <label for="divergencia" class="label">Me fale a divergência:</label>
+                <div class="input-container">
+                    <input type="text" id="divergencia" class="input" placeholder="Digite a divergência">
+                </div>
+                <button type="button" onclick="inicio()" class="button">Verificar</button>
+            </form>
+            <p id="resultado" class="result"></p>
+            <button onclick="voltarPaginaInicial()" class="button">Voltar</button>
+        </div>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo-container">
+        <a href="https://muffatocombr.sharepoint.com/sites/Devolucao/Documentos%20Compartilhados/Forms/AllItems.aspx?id=%2Fsites%2FDevolucao%2FDocumentos%20Compartilhados%2FCentral%20de%20Notas&p=true&ct=1716820264179&or=Teams%2DHL&ga=1" target="_blank">
+            <img src="imgs/Logo_Super_Muffato_(2021).svg.png" alt="Logo do Grupo Muffato" class="logo">
+        </a>
+    </div>
+
+    <div class="signature">
+        Vitor Gabriel®️
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
