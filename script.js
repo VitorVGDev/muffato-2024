@@ -76,7 +76,7 @@ function verificarItem() {
             }
         } else if (item.includes("leite") || item.includes("margarina") || item.includes("iogurte") || item.includes("queijo")) {
             if (centrosFiliais1.includes(centroFilial)) {
-                resposta = "Marque o @PAS";
+                resposta = "Marque o @PAS_saopaulo";
             } else if (centrosFiliais2.includes(centroFilial)) {
                 resposta = "Marque o @PAS_norte_cash ou @PAS_norte_varejo";
                 gestorResposta = "@David Renan";
