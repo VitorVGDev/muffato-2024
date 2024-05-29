@@ -9,9 +9,11 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    position: relative;
 }
 
 .container {
+    position: relative;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 30px;
     border-radius: 15px;
@@ -55,6 +57,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
     padding-left: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 .input::placeholder {
@@ -77,11 +80,13 @@ body {
     background-color: #e60000;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
     background-color: #cc0000;
     transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .result {
@@ -103,4 +108,55 @@ body {
     content: '|';
     display: inline-block;
     animation: blink 1s infinite;
+}
+
+.pagina {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.pagina.active {
+    display: block;
+    opacity: 1;
+}
+
+.home-icon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.home-icon:hover {
+    transform: scale(1.2);
+    color: #e60000;
+}
+
+.logo-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.signature {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 14px;
+    font-style: italic;
 }
