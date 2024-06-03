@@ -74,7 +74,7 @@ function verificarItem() {
             } else {
                 resposta = "Centro/Filial não reconhecido para FLV.";
             }
-        } else if (item.includes("leite") || item.includes("margarina") || item.includes("iogurte") || item.includes("queijo")) {
+        } else if (item.includes("leite") || item.includes("margarina") || item.includes("iogurte") || item.includes("queijo") || item.includes("yakult") || item.includes("")) {
             if (centrosFiliais1.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
             } else if (centrosFiliais2.includes(centroFilial)) {
@@ -191,3 +191,20 @@ function limparCampos() {
 
 // Adiciona um evento de clique ao ícone da casinha
 document.querySelector('.home-icon').addEventListener('click', voltarPaginaInicial);
+
+function voltarPaginaInicial() {
+    const container = document.querySelector('.container');
+    container.classList.add('fade-out');
+    setTimeout(() => {
+        limparCampos();
+        const paginas = document.querySelectorAll('.pagina');
+        paginas.forEach(pagina => {
+            if (pagina.id === 'paginaInicial') {
+                pagina.classList.add('active');
+            } else {
+                pagina.classList.remove('active');
+            }
+        });
+        container.classList.remove('fade-out');
+    }, 500); // O tempo deve corresponder à duração da animação de fade-out
+}
