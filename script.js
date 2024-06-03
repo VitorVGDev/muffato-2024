@@ -42,7 +42,7 @@ function verificarItem() {
     setTimeout(() => {
         let resposta = "";
         let gestorResposta = "";
-
+        
         const centrosFiliais1 = [
             "1036", "1050", "1069", "1071", "1073", "1078", "1080", "1084",
             "1097", "1098", "1099", "1100", "1105", "1106", "1107", "1108",
@@ -58,7 +58,28 @@ function verificarItem() {
             "1030", "1046", "1093", "1123", "1083"
         ];
 
-        if (item.includes("frutas") || item.includes("legumes") || item.includes("verduras") || item.includes("flv")) {
+        const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão", "manga"];
+        const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho", "cebola", "pimentão"];
+        const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho", "salsa", "coentro"];
+        const pas = ["leite", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata"];
+        const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça"];
+        const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos"];
+        const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "higiene íntima"];
+        const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão"];
+        const saudaveis = ["suplemento", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno"];
+        const mercearia = ["arroz", "feijão", "lentilha", "grão-de-bico", "milho", "macarrão", "lasanha", "espaguete", "penne", "talharim",
+                           "óleo de soja", "óleo de girassol", "azeite de oliva", "manteiga", "banha",
+                           "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
+                           "ketchup", "mostarda", "maionese", "molho de tomate", "vinagre",
+                           "sal", "pimenta", "açafrão", "orégano", "manjericão",
+                           "farinha de trigo", "farinha de mandioca", "farinha de milho", "mistura para bolo", "massa para pão",
+                           "pão de forma", "torrada", "biscoitos", "bolachas", "pães integrais",
+                           "chocolate", "gelatina", "pudim", "sorvete", "doce de leite",
+                           "suco de caixinha", "refrigerante", "água mineral", "água com gás", "água de coco",
+                           "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas",
+                           "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa"];
+
+        if (frutas.includes(item) || legumes.includes(item) || verduras.includes(item) || item.includes("flv")) {
             if (["1036", "1050", "1105", "1106", "1142", "1135", "1138"].includes(centroFilial)) {
                 resposta = "Marque o @FLV_SP_PR";
                 gestorResposta = "@Jully Radassa ou @Marcos";
@@ -74,25 +95,28 @@ function verificarItem() {
             } else {
                 resposta = "Centro/Filial não reconhecido para FLV.";
             }
-        } else if (item.includes("leite") || item.includes("margarina") || item.includes("iogurte") || item.includes("queijo") || item.includes("yakult")) {
+        } else if (pas.includes(item)) {
             if (centrosFiliais1.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
             } else if (centrosFiliais2.includes(centroFilial)) {
                 resposta = "Marque o @PAS_norte_cash ou @PAS_norte_varejo";
                 gestorResposta = "@David Renan";
             }
-        } else if (item.includes("carne")) {
+        } else if (carnes.includes(item)) {
             resposta = "Marque o @Açougue";
-        } else if (item.includes("cigarro") || item.includes("tecido") || item.includes("papel higiênico")) {
+        } else if (bazar.includes(item)) {
             resposta = "Crie a tratativa no canal do Bazar.";
-        } else if (item.includes("perfumaria") || item.includes("produtos de limpeza") || item.includes("produtos de higiene")) {
+        } else if (perfumaria.includes(item) || limpeza.includes(item)) {
             if (centrosFiliais1.includes(centroFilial)) {
                 resposta = "Marque o @Perfumaria_Limpeza_SP";
                 gestorResposta = "@Lucas Tavares";
             }
-        } else if (item.includes("suplemento")) {
+        } else if (saudaveis.includes(item)) {
             resposta = "Marque o @Saudaveis";
             gestorResposta = "@Ana Flávia Vicente";
+        } else if (mercearia.includes(item)) {
+            resposta = "Item pertence à Mercearia";
+            gestorResposta = "Marque o @Nicolas Lucas Belem"
         } else {
             resposta = "Item não reconhecido.";
         }
@@ -138,27 +162,15 @@ function inicio() {
 
     setTimeout(() => {
         let resposta = "";
-
+        
         if (div === "confirmações de uso" || div === "confirmação de uso" || div === "quantidade") {
             resposta = "Por ser uma divergência que afetará a quantidade, coloque QUANTIDADE nas observações da nota.";
-        } else if (div === "ifop" || div === "icms" || div === "ipi" || div === "valor fcp" || div === "ICMS Valor XML" || div ==="ICMS Base XML" || div === "ICMS Base Pedido" || div ==="ICMS Taxa XML" || div === "ICMS ST Va") {
-            resposta = "Coloque TRIBUTAÇÃO (e o horário) nas observações. Se o caminhão estiver no pátio, acrescente T01. Exemplo: a78; tributação T01 (horário).";
-        } else if (div === "remessa final") {
-            resposta = "Coloque RF nas observações.";
-        } else if (div === "valor outro" || div === "valor outr") {
-            resposta = "Coloque ZDAV nas observações.";
-        } else if (div === "associação manual" || div === "associação" || div === "associacao manual") {
-            resposta = "Coloque CAD nas observações.";
-        } else if (div === "emissor da fatura") {
-            resposta = "Coloque EF nas observações.";
-        } else if (div === "conversão" || div === "conversao" || div === "Qtde Conve") {
-            resposta = "Coloque CONV nas observações.";
-        } else if (div === "frete xml" || div === "frete XML" || div === "Frete XML" || div === "Frete Pedido") {
-            resposta = "Coloque FRETE nas observações.";
-        } else if (div === "tipo" || div === "tipo do pedido" || div === "Tipo do pe") {
-            resposta = "Se estiver ZB no campo, peça para o responsável informar um pedido bonificado. Coloque SEM PEDIDO nas observações.";
-        } else if(div === "valor desconto" || div === "Valor Desconto XML" || div === "Valor Desconto Ped") {
-            resposta = "Coloque DESCONTO nas observações.";
+        } else if (div.includes("icms") || div.includes("ipi") || div.includes("ifop")) {
+            resposta = "Por ser uma divergência de imposto, coloque IMPOSTO nas observações da nota.";
+        } else if (div === "valor" || div === "valor fcp") {
+            resposta = "Por ser uma divergência de valor, coloque VALOR nas observações da nota.";
+        } else if (div === "peso") {
+            resposta = "Por ser uma divergência que afetará o peso, coloque PESO nas observações da nota.";
         } else {
             resposta = "Divergência não reconhecida.";
         }
@@ -178,16 +190,16 @@ function inicio() {
         }
 
         typeWriter();
-    }, 400); // Delay to simulate processing time
+    }, 500); // Delay to simulate processing time
 }
 
 function limparCampos() {
-    document.getElementById("centroFilial").value = '';
-    document.getElementById("itemNota").value = '';
-    document.getElementById("divergencia").value = '';
-    document.getElementById("resultadoMarcar").textContent = '';
-    document.getElementById("resultadoGestor").textContent = '';
-    document.getElementById("resultado").textContent = '';
+    document.getElementById("centroFilial").value = "";
+    document.getElementById("itemNota").value = "";
+    document.getElementById("divergencia").value = "";
+    document.getElementById("resultadoMarcar").textContent = "";
+    document.getElementById("resultadoGestor").textContent = "";
+    document.getElementById("resultado").textContent = "";
 }
 
 // Adiciona um evento de clique ao ícone da casinha
