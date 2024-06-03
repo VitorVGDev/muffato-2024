@@ -159,4 +159,13 @@ body {
     color: #fff;
     font-size: 14px;
     font-style: italic;
+    
+}
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
 }
