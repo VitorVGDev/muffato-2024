@@ -42,7 +42,7 @@ function verificarItem() {
     setTimeout(() => {
         let resposta = "";
         let gestorResposta = "";
-        
+
         const centrosFiliais1 = [
             "1036", "1050", "1069", "1071", "1073", "1078", "1080", "1084",
             "1097", "1098", "1099", "1100", "1105", "1106", "1107", "1108",
@@ -57,7 +57,7 @@ function verificarItem() {
             "1125", "1004", "1081", "1104", "1059", "1044", "1072", "1065",
             "1030", "1046", "1093", "1123", "1083"
         ];
-        
+
         if (item.includes("frutas") || item.includes("legumes") || item.includes("verduras") || item.includes("flv")) {
             if (["1036", "1050", "1105", "1106", "1142", "1135", "1138"].includes(centroFilial)) {
                 resposta = "Marque o @FLV_SP_PR";
@@ -74,7 +74,7 @@ function verificarItem() {
             } else {
                 resposta = "Centro/Filial não reconhecido para FLV.";
             }
-        } else if (item.includes("leite") || item.includes("margarina") || item.includes("iogurte") || item.includes("queijo") || item.includes("yakult") || item.includes("")) {
+        } else if (item.includes("leite") || item.includes("margarina") || item.includes("iogurte") || item.includes("queijo") || item.includes("yakult")) {
             if (centrosFiliais1.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
             } else if (centrosFiliais2.includes(centroFilial)) {
@@ -138,7 +138,7 @@ function inicio() {
 
     setTimeout(() => {
         let resposta = "";
-        
+
         if (div === "confirmações de uso" || div === "confirmação de uso" || div === "quantidade") {
             resposta = "Por ser uma divergência que afetará a quantidade, coloque QUANTIDADE nas observações da nota.";
         } else if (div === "ifop" || div === "icms" || div === "ipi" || div === "valor fcp" || div === "ICMS Valor XML" || div ==="ICMS Base XML" || div === "ICMS Base Pedido" || div ==="ICMS Taxa XML" || div === "ICMS ST Va") {
@@ -156,8 +156,9 @@ function inicio() {
         } else if (div === "frete xml" || div === "frete XML" || div === "Frete XML" || div === "Frete Pedido") {
             resposta = "Coloque FRETE nas observações.";
         } else if (div === "tipo" || div === "tipo do pedido" || div === "Tipo do pe") {
-            resposta = "Se estiver ZB no campo, peça para o responsável informar um pedido bonificado. Coloque SEM PEDIDO nas observações.";  
-        } else if(div === "valor desconto" || div === "Valor Desconto XML" || div === "Valor Desconto Ped"){      
+            resposta = "Se estiver ZB no campo, peça para o responsável informar um pedido bonificado. Coloque SEM PEDIDO nas observações.";
+        } else if(div === "valor desconto" || div === "Valor Desconto XML" || div === "Valor Desconto Ped") {
+            resposta = "Coloque DESCONTO nas observações.";
         } else {
             resposta = "Divergência não reconhecida.";
         }
