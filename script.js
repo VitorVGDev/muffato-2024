@@ -43,7 +43,7 @@ function verificarItem() {
         let resposta = "";
         let gestorResposta = "";
         
-        const centrosFiliais1 = [
+        const centrosFiliaisSP = [
             "1036", "1050", "1069", "1071", "1073", "1078", "1080", "1084",
             "1097", "1098", "1099", "1100", "1105", "1106", "1107", "1108",
             "1117", "1126", "1127", "1128", "1129", "1131", "1132", "1133",
@@ -96,7 +96,7 @@ function verificarItem() {
                 resposta = "Centro/Filial não reconhecido para FLV.";
             }
         } else if (pas.includes(item)) {
-            if (centrosFiliais1.includes(centroFilial)) {
+            if (centrosFiliaisSP.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
                 gestorResposta = "@Noemy Rodrigues ou @João Victor Queiroz";
             } else if (centrosFiliais2.includes(centroFilial)) {
@@ -109,7 +109,7 @@ function verificarItem() {
         } else if (bazar.includes(item)) {
             resposta = "Crie a tratativa no canal do Bazar.";
         } else if (perfumaria.includes(item) || limpeza.includes(item)) {
-            if (centrosFiliais1.includes(centroFilial)) {
+            if (centrosFiliaisSP.includes(centroFilial)) {
                 resposta = "Marque o @Perfumaria_Limpeza_SP";
                 gestorResposta = "@Lucas Tavares";
             }
