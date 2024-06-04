@@ -133,7 +133,7 @@ function verificarItem() {
             }
         } else if (saudaveis.includes(item)) {
             resposta = "Marque o @Saudaveis";
-            gestorResposta = "@Ana Flávia Vicente";
+            gestorResposta = "@Ana Flávia Vicente ou @Rony Pereira";
         } else if (mercearia.includes(item)) {
             resposta = "Item pertence à Mercearia";
             gestorResposta = "Marque o @Nicolas Lucas Belem"
