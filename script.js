@@ -105,7 +105,7 @@ function verificarItem() {
             }
         } else if (carnes.includes(item)) {
             resposta = "Marque o @Açougue";
-            gestorResposta = "Marque o @Vitor Portela ou @Jessica Priscila"
+            gestorResposta = "Marque o @Vitor Portela ou @Jessica Priscila Bertocco"
         } else if (bazar.includes(item)) {
             resposta = "Crie a tratativa no canal do Bazar.";
         } else if (perfumaria.includes(item) || limpeza.includes(item)) {
