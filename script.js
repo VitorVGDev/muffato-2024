@@ -185,13 +185,13 @@ function inicio() {
         
         if (div === "confirmações de uso" || div === "confirmação de uso" || div === "quantidade") {
             resposta = "Por ser uma divergência que afetará a quantidade, coloque QUANTIDADE nas observações da nota.";
-        } else if (div.includes("icms") || div.includes("ipi") || div.includes("ifop")) {
+        } else if (div === "valor ipi" || div === "valor fcp" || div === ipi || div === fcp || div === "ipi taxa") {
             resposta = "Coloque TRIBUTAÇÃO (e o horário). Se o caminhão estiver no pátio, acrescente T01. Exemplo: a78 tributação T01 (horário)";
-        } else if (div === "valor" || div === "valor fcp") {
-            resposta = "Por ser uma divergência de valor, coloque VALOR nas observações da nota.";
-        } else if (div === "peso") {
-            resposta = "Por ser uma divergência que afetará o peso, coloque PESO nas observações da nota.";
-        } else {
+        } else if (div === "valor bruto" || div === "vlr bruto" || div === "valor") {
+            resposta = "Coloque preço nas observações.";
+        } else if (div === "associacao manual" || div === "associação manual" || div === "associação") {
+            resposta = "Coloque CAD nas observações.";
+        }else {
             resposta = "Divergência não reconhecida.";
         }
 
