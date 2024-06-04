@@ -58,15 +58,15 @@ function verificarItem() {
             "1030", "1046", "1093", "1123", "1083"
         ];
 
-        const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão", "manga"];
+        const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão", "manga", "flv"];
         const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho", "cebola", "pimentão"];
         const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho", "salsa", "coentro"];
-        const pas = ["leite", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata"];
-        const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça"];
-        const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos"];
-        const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "higiene íntima"];
+        const pas = ["leite", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas"];
+        const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue"];
+        const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos", "bazar"];
+        const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"];
         const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão"];
-        const saudaveis = ["suplemento", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno"];
+        const saudaveis = ["suplemento", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno", "saudaveis"];
         const mercearia = ["arroz", "feijão", "lentilha", "grão-de-bico", "milho", "macarrão", "lasanha", "espaguete", "penne", "talharim",
                            "óleo de soja", "óleo de girassol", "azeite de oliva", "manteiga", "banha",
                            "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
@@ -98,6 +98,7 @@ function verificarItem() {
         } else if (pas.includes(item)) {
             if (centrosFiliais1.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
+                gestorResposta = "@Noemy Rodrigues ou @João Victor Queiroz";
             } else if (centrosFiliais2.includes(centroFilial)) {
                 resposta = "Marque o @PAS_norte_cash ou @PAS_norte_varejo";
                 gestorResposta = "@David Renan";
