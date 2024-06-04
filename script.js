@@ -80,7 +80,7 @@ function verificarItem() {
                           "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche"
        ];
 
-        const pas = ["leite", "lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas"];
+        const pas = ["leite", "brownie", "brownie sem gluten", "brownie s/ glúten", "brownie sem glúten", "lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas"];
         const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue", "carne"];
         const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos", "bazar"];
         const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"];
