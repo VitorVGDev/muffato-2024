@@ -51,7 +51,7 @@ function verificarItem() {
             "1142", "1143"
         ];
 
-        const centrosFiliais2 = [
+        const centrosFiliaisNOR = [
             "1110", "1060", "1082", "1114", "1055", "1061", "1074", "1037",
             "1028", "1047", "1035", "1048", "1031", "1085", "1064", "1049",
             "1125", "1004", "1081", "1104", "1059", "1044", "1072", "1065",
@@ -107,7 +107,7 @@ function verificarItem() {
             } else if (["1126", "1127", "1128", "1129", "1131", "1132", "1133", "1134", "1136", "1137", "1139", "1140", "1141", "1143"].includes(centroFilial)) {
                 resposta = "Marque o @FLV_SP_SAOPAULO";
                 gestorResposta = "@Misrael ou @Thalita";
-            } else if (centrosFiliais2.includes(centroFilial)) {
+            } else if (centrosFiliaisNOR.includes(centroFilial)) {
                 resposta = "Marque o @FLV_norte";
                 gestorResposta = "@Jully Radassa ou @Marcos Gomes";
             } else {
@@ -117,7 +117,7 @@ function verificarItem() {
             if (centrosFiliaisSP.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
                 gestorResposta = "@Noemy Rodrigues ou @João Victor Queiroz";
-            } else if (centrosFiliais2.includes(centroFilial)) {
+            } else if (centrosFiliaisNOR.includes(centroFilial)) {
                 resposta = "Marque o @PAS_norte_cash ou @PAS_norte_varejo";
                 gestorResposta = "@David Renan";
             }
