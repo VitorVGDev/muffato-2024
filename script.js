@@ -58,9 +58,35 @@ function verificarItem() {
             "1030", "1046", "1093", "1123", "1083"
         ];
 
-        const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão", "manga", "flv"];
-        const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho", "cebola", "pimentão"];
-        const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho", "salsa", "coentro"];
+         const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão",
+    "manga", "flv", "pera", "kiwi", "abacate", "cereja", "framboesa", "amora", "ameixa",
+    "figo", "uva-passa", "pêssego", "nectarina", "melão", "carambola", "pitanga", "jabuticaba",
+    "caqui", "tangerina", "graviola", "goiaba", "maracujá", "abiu", "jaca", "caju", "acerola",
+    "guaraná", "cupuaçu", "umbu", "bacaba", "murici", "cambuci", "pupunha", "pequi", "jujuba",
+    "tamarindo", "sapoti", "atemoia", "cagaita", "cabeludinha", "cereja-do-rio-grande",
+    "cereja-do-mato", "cereja-do-nordeste"
+         ];
+
+        const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho",
+    "cebola", "pimentão", "espargos", "abóbora", "quiabo", "ervilha", "milho", "feijão",
+    "vagem", "nabo", "rabanete", "mandioca", "inhame", "batata-doce", "chuchu", "pupunha",
+    "jiló", "maxixe", "cará", "jerimum", "mandioquinha", "cenoura-roxa", "cenoura-amarela",
+    "cenoura-branca"
+          ];
+
+        const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho",
+    "salsa", "coentro", "pimenta", "açafrão", "almeirão", "acelga", "alho-poró", "mostarda",
+    "alface-romana", "alface-americana", "alface-crespa", "alface-lisa", "alface-roxa",
+    "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche",
+    "alface-lollo-rosso", "alface-lollo-bionda", "alface-batavia", "alface-vermelha",
+    "alface-verde", "alface-amarela", "alface-rosa", "alface-cinza", "alface-dourada",
+    "alface-azul", "alface-preta", "alface-prateada", "alface-alaranjada", "alface-rosada",
+    "alface-vermelha-escura", "alface-vermelha-clara", "alface-vermelha-média",
+    "alface-vermelha-intensa", "alface-vermelha-suave", "alface-vermelha-brilhante",
+    "alface-vermelha-opaca", "alface-vermelha-avermelhada", "alface-vermelha-rosada",
+    "alface-vermelha-alaranjada", "alface-vermelha-amarelada", "alface-vermelha-esverdeada"
+       ];
+
         const pas = ["leite", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas"];
         const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue", "carne"];
         const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos", "bazar"];
