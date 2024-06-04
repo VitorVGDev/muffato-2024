@@ -186,7 +186,7 @@ function inicio() {
         if (div === "confirmações de uso" || div === "confirmação de uso" || div === "quantidade") {
             resposta = "Por ser uma divergência que afetará a quantidade, coloque QUANTIDADE nas observações da nota.";
         } else if (div.includes("icms") || div.includes("ipi") || div.includes("ifop")) {
-            resposta = "Por ser uma divergência de imposto, coloque IMPOSTO nas observações da nota.";
+            resposta = "Coloque TRIBUTAÇÃO (e o horário). Se o caminhão estiver no pátio, acrescente T01. Exemplo: a78 tributação T01 (horário)";
         } else if (div === "valor" || div === "valor fcp") {
             resposta = "Por ser uma divergência de valor, coloque VALOR nas observações da nota.";
         } else if (div === "peso") {
