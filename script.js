@@ -58,27 +58,27 @@ function verificarItem() {
             "1030", "1046", "1093", "1123", "1083"
         ];
 
-         const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão",
-                         "manga", "flv", "pera", "kiwi", "abacate", "cereja", "framboesa", "amora", "ameixa",
-                         "figo", "uva-passa", "pêssego", "nectarina", "melão", "carambola", "pitanga", "jabuticaba",
-                         "caqui", "tangerina", "graviola", "goiaba", "maracujá", "abiu", "jaca", "caju", "acerola",
-                         "guaraná", "cupuaçu", "umbu", "bacaba", "murici", "cambuci", "pupunha", "pequi", "jujuba",
-                         "tamarindo", "sapoti", "atemoia", "cagaita", "cabeludinha", "cereja-do-rio-grande",
-                         "cereja-do-mato", "cereja-do-nordeste"
-         ];
+        const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão",
+                        "manga", "flv", "pera", "kiwi", "abacate", "cereja", "framboesa", "amora", "ameixa",
+                        "figo", "uva-passa", "pêssego", "nectarina", "melão", "carambola", "pitanga", "jabuticaba",
+                        "caqui", "tangerina", "graviola", "goiaba", "maracujá", "abiu", "jaca", "caju", "acerola",
+                        "guaraná", "cupuaçu", "umbu", "bacaba", "murici", "cambuci", "pupunha", "pequi", "jujuba",
+                        "tamarindo", "sapoti", "atemoia", "cagaita", "cabeludinha", "cereja-do-rio-grande",
+                        "cereja-do-mato", "cereja-do-nordeste"
+        ];
 
         const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho",
-                         "cebola", "pimentão", "espargos", "abóbora", "quiabo", "ervilha", "milho", "feijão",
-                         "vagem", "nabo", "rabanete", "mandioca", "inhame", "batata-doce", "chuchu", "pupunha",
-                         "jiló", "maxixe", "cará", "jerimum", "mandioquinha", "cenoura-roxa", "cenoura-amarela",
-                         "cenoura-branca"
+                        "cebola", "pimentão", "espargos", "abóbora", "quiabo", "ervilha", "milho", "feijão",
+                        "vagem", "nabo", "rabanete", "mandioca", "inhame", "batata-doce", "chuchu", "pupunha",
+                        "jiló", "maxixe", "cará", "jerimum", "mandioquinha", "cenoura-roxa", "cenoura-amarela",
+                        "cenoura-branca"
         ];
 
         const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho",
-                          "salsa", "coentro", "pimenta", "açafrão", "almeirão", "acelga", "alho-poró", "mostarda",
-                          "alface-romana", "alface-americana", "alface-crespa", "alface-lisa", "alface-roxa",
-                          "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche"
-       ];
+                        "salsa", "coentro", "pimenta", "açafrão", "almeirão", "acelga", "alho-poró", "mostarda",
+                        "alface-romana", "alface-americana", "alface-crespa", "alface-lisa", "alface-roxa",
+                        "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche"
+        ];
 
         const pas = ["leite", "brownie","lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas"];
         const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue", "carne"];
@@ -87,15 +87,17 @@ function verificarItem() {
         const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão", "limpeza"];
         const saudaveis = ["suplemento", "brownie sem gluten", "brownie s/ glúten", "brownie sem glúten", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno", "saudaveis"];
         const mercearia = ["arroz", "brownie sem gluten", "brownie s/ glúten", "feijão", "lentilha", "grão-de-bico", "milho", "macarrão", "lasanha", "espaguete", "penne", "talharim",
-                           "óleo de soja", "óleo de girassol", "azeite de oliva", "manteiga", "banha",
-                           "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
-                           "ketchup", "mostarda", "maionese", "molho de tomate", "vinagre",
-                           "sal", "farinha de trigo", "farinha de mandioca", "farinha de milho", "mistura para bolo", "massa para pão",
-                           "pão de forma", "torrada", "biscoitos", "bolachas", "pães integrais",
-                           "chocolate", "gelatina", "pudim", "sorvete", "doce de leite",
-                           "suco de caixinha", "refrigerante", "água mineral", "água com gás", "água de coco",
-                           "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas",
-                           "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa", "mercearia"];
+                            "óleo de soja", "óleo de girassol", "azeite de oliva", "manteiga", "banha",
+                            "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
+                            "ketchup", "mostarda", "maionese", "molho de tomate", "vinagre",
+                            "sal", "farinha de trigo", "farinha de mandioca", "farinha de milho", "mistura para bolo", "massa para pão",
+                            "pão de forma", "torrada", "biscoitos", "bolachas", "pães integrais",
+                            "chocolate", "gelatina", "pudim", "sorvete", "doce de leite",
+                            "suco de caixinha", "refrigerante", "água mineral", "água com gás", "água de coco",
+                            "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas",
+                            "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa", "mercearia"];
+
+        const bebidas = ["bebida","bebidas", "cerveja", "refrigerante",]; // Adicionando as bebidas à lista
 
         if (frutas.includes(item) || legumes.includes(item) || verduras.includes(item) || item.includes("flv")) {
             if (["1036", "1050", "1105", "1106", "1142", "1135", "1138"].includes(centroFilial)) {
@@ -137,6 +139,11 @@ function verificarItem() {
         } else if (mercearia.includes(item)) {
             resposta = "Item pertence à Mercearia";
             gestorResposta = "Marque o @Nicolas Lucas Belem"
+        } else if (bebidas.includes(item)) { // Verifica se o item é uma bebida
+            if (centrosFiliaisSP.includes(centroFilial)) {
+                resposta = "Marque o @Edilson Luiz ou use as TAGs:";
+                gestorResposta = "@bebidas_saopaulo_varejo (se a loja for varejo) ou @bebidas_saopaulo_cash (se a loja for cash ou atacarejo)";
+            }
         } else {
             resposta = "Item não reconhecido.";
         }
