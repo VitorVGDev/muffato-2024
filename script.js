@@ -94,7 +94,7 @@ function verificarItem() {
                             "pão de forma", "torrada", "biscoitos", "bolachas", "pães integrais",
                             "chocolate", "gelatina", "pudim", "sorvete", "doce de leite",
                             "suco de caixinha", "refrigerante", "água mineral", "água com gás", "água de coco",
-                            "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas",
+                            "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas", "café",
                             "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa", "mercearia"];
 
         const bebidas = ["bebida","bebidas", "cerveja", "refrigerante",]; // Adicionando as bebidas à lista
