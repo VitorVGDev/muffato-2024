@@ -68,8 +68,8 @@ function verificarItem() {
         ];
 
         const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho",
-                        "cebola", "pimentão", "espargos", "abóbora", "quiabo", "ervilha", "milho", "feijão",
-                        "vagem", "nabo", "rabanete", "mandioca", "inhame", "batata-doce", "chuchu", "pupunha",
+                        "cebola", "pimentão", "espargos", "abóbora", "quiabo", "ervilha", "milho","vagem", 
+                        "nabo", "rabanete", "mandioca", "inhame", "batata-doce", "chuchu", "pupunha",
                         "jiló", "maxixe", "cará", "jerimum", "mandioquinha", "cenoura-roxa", "cenoura-amarela",
                         "cenoura-branca"
         ];
