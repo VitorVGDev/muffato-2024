@@ -138,7 +138,7 @@ function verificarItem() {
             gestorResposta = "@Ana Flávia Vicente ou @Rony Pereira";
         } else if (mercearia.includes(item)) {
             resposta = "Item pertence à Mercearia";
-            gestorResposta = "Marque o @Nicolas Lucas Belem"
+            gestorResposta = "Marque o @Nicolas Lucas Belem ou @Lucas Batista Melo"
         } else if (bebidas.includes(item)) { // Verifica se o item é uma bebida
             if (centrosFiliaisSP.includes(centroFilial)) {
                 resposta = "Marque o @Edilson Luiz ou use as TAGs:";
