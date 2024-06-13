@@ -75,7 +75,7 @@ function verificarItem() {
         ];
 
         const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho",
-                        "salsa", "coentro", "pimenta", "açafrão", "almeirão", "acelga", "alho-poró", "mostarda",
+                        "salsa", "coentro", "pimenta", "açafrão", "almeirão", "acelga", "alho-poró",
                         "alface-romana", "alface-americana", "alface-crespa", "alface-lisa", "alface-roxa",
                         "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche"
         ];
