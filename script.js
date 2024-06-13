@@ -86,14 +86,14 @@ function verificarItem() {
         const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"];
         const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão", "limpeza"];
         const saudaveis = ["suplemento", "brownie sem gluten", "brownie s/ glúten", "brownie sem glúten", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno", "saudaveis"];
-        const mercearia = ["arroz", "brownie sem gluten", "brownie s/ glúten", "feijão", "lentilha", "grão-de-bico", "milho", "macarrão", "lasanha", "espaguete", "penne", "talharim",
-                            "óleo de soja", "óleo de girassol", "azeite de oliva", "manteiga", "banha",
+        const mercearia = ["arroz", "brownie sem gluten", "brownie s/ glúten", "feijão", "lentilha", "grão-de-bico", "macarrão", "lasanha", "espaguete", "penne", "talharim",
+                            "óleo de soja", "óleo de girassol", "azeite de oliva",
                             "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
                             "ketchup", "mostarda", "maionese", "molho de tomate", "vinagre",
                             "sal", "farinha de trigo", "farinha de mandioca", "farinha de milho", "mistura para bolo", "massa para pão",
                             "pão de forma", "torrada", "biscoitos", "bolachas", "pães integrais",
                             "chocolate", "gelatina", "pudim", "sorvete", "doce de leite",
-                            "suco de caixinha", "refrigerante", "água mineral", "água com gás", "água de coco",
+                            "suco de caixinha",
                             "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas", "café",
                             "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa", "mercearia"];
 
