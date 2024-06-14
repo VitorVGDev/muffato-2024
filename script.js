@@ -86,7 +86,7 @@ function verificarItem() {
         const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"];
         const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão", "limpeza"];
         const saudaveis = ["suplemento", "brownie sem gluten", "brownie s/ glúten", "brownie sem glúten", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno", "saudaveis"];
-        const mercearia = ["arroz", "brownie sem gluten", "brownie s/ glúten", "feijão", "lentilha", "grão-de-bico", "macarrão", "lasanha", "espaguete", "penne", "talharim",
+        const mercearia = ["arroz", "granola", "barra de cereal" "brownie sem gluten", "brownie s/ glúten", "feijão", "lentilha", "grão-de-bico", "macarrão", "lasanha", "espaguete", "penne", "talharim",
                             "óleo de soja", "óleo de girassol", "azeite de oliva",
                             "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
                             "ketchup", "mostarda", "maionese", "molho de tomate", "vinagre",
