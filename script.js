@@ -58,6 +58,18 @@ function verificarItem() {
             "1030", "1046", "1093", "1123", "1083"
         ];
 
+        const centrosFiliaisOeste = [
+            "1001", "1007", "1018", "1023", "1025", "1026", "1027", "1033", "1040", "1051",
+            "1054", "1057", "1063", "1066", "1086", "1094", "1102", "1109", "1112", "1119",
+            "1120", "1144"
+        ]
+        
+        const centrosFiliaisSul = [
+            "1006", "1032", "1038", "1039", "1042", "1045", "1053", "1056", "1067", "1068",
+            "1070", "1075", "1076", "1079", "1089", "1090", "1091", "1092", "1096", "1101",
+            "1111", "1113", "1115", "1116", "1121", "1122", "1145", "1146"
+        ]
+        
         const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão",
                         "manga", "flv", "pera", "kiwi", "abacate", "cereja", "framboesa", "amora", "ameixa",
                         "figo", "uva-passa", "pêssego", "nectarina", "melão", "carambola", "pitanga", "jabuticaba",
@@ -192,7 +204,7 @@ function inicio() {
         
         if (div === "confirmações de uso" || div === "confirmação de uso" || div === "quantidade") {
             resposta = "Por ser uma divergência que afetará a quantidade, coloque QUANTIDADE nas observações da nota.";
-        } else if (div === "valor ipi" || div === "valor fcp" || div === ipi || div === fcp || div === "ipi taxa") {
+        } else if (div === "valor ipi" || div === "valor fcp" || div === ipi || div === fcp || div === "ipi taxa"){
             resposta = "Coloque TRIBUTAÇÃO (e o horário). Se o caminhão estiver no pátio, acrescente T01. Exemplo: a78 tributação T01 (horário)";
         } else if (div === "valor bruto" || div === "vlr bruto" || div === "valor") {
             resposta = "Coloque preço nas observações.";
