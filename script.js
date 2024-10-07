@@ -49,26 +49,26 @@ function verificarItem() {
             "1117", "1126", "1127", "1128", "1129", "1131", "1132", "1133",
             "1134", "1135", "1136", "1137", "1138", "1139", "1140", "1141",
             "1142", "1143"
-        ];
+        ]; // Filiais de São Paulo
 
         const centrosFiliaisNOR = [
             "1110", "1060", "1082", "1114", "1055", "1061", "1074", "1037",
             "1028", "1047", "1035", "1048", "1031", "1085", "1064", "1049",
             "1125", "1004", "1081", "1104", "1059", "1044", "1072", "1065",
             "1030", "1046", "1093", "1123", "1083"
-        ];
+        ]; // Filiais da regional Norte
 
         const centrosFiliaisOeste = [
             "1001", "1007", "1018", "1023", "1025", "1026", "1027", "1033", "1040", "1051",
             "1054", "1057", "1063", "1066", "1086", "1094", "1102", "1109", "1112", "1119",
             "1120", "1144"
-        ]
+        ] // Filiais da regional Oeste
         
         const centrosFiliaisSul = [
             "1006", "1032", "1038", "1039", "1042", "1045", "1053", "1056", "1067", "1068",
             "1070", "1075", "1076", "1079", "1089", "1090", "1091", "1092", "1096", "1101",
             "1111", "1113", "1115", "1116", "1121", "1122", "1145", "1146"
-        ]
+        ] // Filiais da regional Sul
         
         const frutas = ["banana", "maçã", "uva", "morango", "laranja", "mamão", "abacaxi", "melancia", "limão",
                         "manga", "flv", "pera", "kiwi", "abacate", "cereja", "framboesa", "amora", "ameixa",
@@ -77,29 +77,35 @@ function verificarItem() {
                         "guaraná", "cupuaçu", "umbu", "bacaba", "murici", "cambuci", "pupunha", "pequi", "jujuba",
                         "tamarindo", "sapoti", "atemoia", "cagaita", "cabeludinha", "cereja-do-rio-grande",
                         "cereja-do-mato", "cereja-do-nordeste"
-        ];
+        ]; // Variável com dados de frutas
 
         const legumes = ["cenoura", "batata", "tomate", "abobrinha", "pepino", "beterraba", "berinjela", "alho",
                         "cebola", "pimentão", "espargos", "abóbora", "quiabo", "ervilha", "milho","vagem", 
                         "nabo", "rabanete", "mandioca", "inhame", "batata-doce", "chuchu", "pupunha",
                         "jiló", "maxixe", "cará", "jerimum", "mandioquinha", "cenoura-roxa", "cenoura-amarela",
                         "cenoura-branca"
-        ];
+        ]; // Variável com dados de legumes
 
         const verduras = ["alface", "couve", "espinafre", "rúcula", "agrião", "brócolis", "couve-flor", "repolho",
                         "salsa", "coentro", "pimenta", "açafrão", "almeirão", "acelga", "alho-poró",
                         "alface-romana", "alface-americana", "alface-crespa", "alface-lisa", "alface-roxa",
                         "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche"
-        ];
+        ]; // Variável com dados de verduras
 
-        const flores = ["flores", "planta", "rosa", "orquidea"];
+        const flores = ["flores", "planta", "rosa", "orquidea"]; // Variável com flores
         
-        const pas = ["leite", "presunto", "queijo prato", "queijo coalho", "brownie", "lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas", "salsicha"];
-        const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue", "carne"];
-        const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos", "bazar"];
-        const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"];
-        const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão", "limpeza"];
-        const saudaveis = ["suplemento", "granola", "barra de cereal", "brownie sem gluten", "brownie s/ glúten", "brownie sem glúten", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno", "saudaveis"];
+        const pas = ["leite", "presunto", "queijo prato", "queijo coalho", "brownie", "lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas", "salsicha"]; // variável com dados de PAS
+
+        const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue", "carne"]; // Variável com dados de carnes
+
+        const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos", "bazar"]; // Variável com dados de Bazar
+
+        const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"]; // Variável com dados de perfumaria
+
+        const limpeza = ["detergente", "desinfetante", "sabão em pó", "amaciante", "alvejante", "limpa vidros", "multiuso", "esponjas", "vassouras", "panos de chão", "limpeza"]; // Variável com dados de limpeza
+
+        const saudaveis = ["suplemento", "granola", "barra de cereal", "brownie sem gluten", "brownie s/ glúten", "brownie sem glúten", "vitamina", "proteína", "suplemento alimentar", "barra de proteína", "whey protein", "creatina", "glutamina", "BCAA", "colágeno", "saudaveis"]; // Variável com dados de produtos saudáveis
+
         const mercearia = ["arroz", "brownie sem gluten", "brownie s/ glúten", "feijão", "lentilha", "grão-de-bico", "macarrão", "lasanha", "espaguete", "penne", "talharim",
                             "óleo de soja", "óleo de girassol", "azeite de oliva",
                             "milho em conserva", "ervilhas em conserva", "sardinha em lata", "atum enlatado", "palmito em conserva",
@@ -109,32 +115,33 @@ function verificarItem() {
                             "chocolate", "gelatina", "pudim", "sorvete", "doce de leite",
                             "suco de caixinha",
                             "café em pó", "café solúvel", "chá preto", "chá verde", "chá de ervas", "café",
-                            "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa", "mercearia"];
+                            "açúcar refinado", "açúcar mascavo", "adoçante em pó", "adoçante líquido","água","grãos", "cereais", "pão", "biscoito", "bolacha", "massa", "mercearia"]; // Variável com dados de itens da mercearia
 
         const bebidas = ["bebida","bebidas", "cerveja", "refrigerante",]; // Adicionando as bebidas à lista
 
         if (frutas.includes(item) || legumes.includes(item) || verduras.includes(item) || flores.includes(item) || item.includes("flv")) {
             if (["1036", "1050", "1105", "1106", "1142", "1135", "1138"].includes(centroFilial)) {
                 resposta = "Se tiver COMP no pedido, marque o responsável da LOJA. Se não, Marque o @FLV_SP_PR";
-                gestorResposta = "@Jully Radassa ou @Marcos";
+                gestorResposta = "@Jully Radassa ou @Marcos Gomes";
             } else if (["1073", "1078", "1084", "1097", "1107", "1069", "1071", "1080", "1098", "1099", "1100", "1108", "1117"].includes(centroFilial)) {
                 resposta = "Marque o @FLV_SP_MIRASSOL";
-                gestorResposta = "@Vania Kenia";
+                gestorResposta = "@Vania Kenia ou @George Jonathan";
             } else if (["1126", "1127", "1128", "1129", "1131", "1132", "1133", "1134", "1136", "1137", "1139", "1140", "1141", "1143"].includes(centroFilial)) {
                 resposta = "Marque o @FLV_SP_SAOPAULO";
-                gestorResposta = "@Misrael ou @Thalita";
+                gestorResposta = "@Alice Alves ou @Thalita Aparecida";
             } else if (centrosFiliaisNOR.includes(centroFilial)) {
                 resposta = "Marque o @FLV_norte";
-                gestorResposta = "@Jully Radassa";
+                gestorResposta = "@Jully Radassa ou @Marcos Gomes";
             } else if(centrosFiliaisOeste.includes(centroFilial)){
                 resposta = "Verifique se o pedido é da loja. Para isso, abra a me23n, olhe se o pedido foi criado por COMP."
             } else if(centrosFiliaisSul.includes(centroFilial)){
-                resposta = "Se o pedido for de flores, marque @FLV_SUL_FLORES. Se não, @FLV_SUL."
+                resposta = "@FLV_SUL_FLORES para pedidos de flores ou @FLV_SUL."
                 gestorResposta = "@Jully Radassa ou @Joao Batista da Silva"
             }
             else {
-                resposta = "Centro/Filial não reconhecido para FLV.";
+                resposta = "Centro/Filial não reconhecido. Verifique e tente novamente.";
             }
+
         } // fim seção FLV
         
         else if (pas.includes(item)) {
@@ -145,7 +152,7 @@ function verificarItem() {
                 resposta = "Marque o @PAS_norte_cash";
                 gestorResposta = "@David Renan ou @Marcelo Martins";
             } else if(["1004", "1028", "1029", "1030", "1035", "1044", "1047", "1048", "1049", "1055", "1059", "1061", "1064", "1072", "1081", "1082", "1083", "1104", "1147"].includes(centroFilial)){
-                resposta = "Marque o PAS_norte_varejo";
+                resposta = "Marque o @PAS_norte_varejo";
                 gestorResposta = "@David Renan da Silva ou @Marcelo Martins";
             } else if(centrosFiliaisSul.includes(centroFilial)){
                 resposta = "Marque o @PAS_SUL";
@@ -154,6 +161,7 @@ function verificarItem() {
                 resposta = "Marque o @Pas_e_Salsicharia"
                 gestorResposta = "@Franciele Silva de lima ou @Micaela Antônia"
             }   
+
         }// Fim da seção PAS
 
         else if (carnes.includes(item)) {
