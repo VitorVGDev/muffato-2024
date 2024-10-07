@@ -92,7 +92,9 @@ function verificarItem() {
                         "alface-frisada", "alface-iceberg", "alface-radichio", "alface-tatsoi", "alface-mâche"
         ];
 
-        const pas = ["leite", "presunto", "queijo prato", "queijo coalho", "brownie", "lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas"];
+        const flores = ["flores", "planta", "rosa", "orquidea"];
+        
+        const pas = ["leite", "presunto", "queijo prato", "queijo coalho", "brownie", "lasanha", "bacon", "pizza", "salame", "iogurte", "queijo", "margarina", "yakult", "manteiga", "requeijão", "creme de leite", "leite condensado", "nata", "pas", "salsicha"];
         const carnes = ["carne bovina", "carne suína", "frango", "peixe", "carne de cordeiro", "carne moída", "filé mignon", "picanha", "costela", "linguiça", "açougue", "carne"];
         const bazar = ["cigarro", "tecido", "papel higiênico", "utensílios domésticos", "brinquedos", "ferramentas", "itens de papelaria", "decoração", "malas", "eletrodomésticos", "bazar"];
         const perfumaria = ["shampoo", "condicionador", "sabonete", "creme dental", "desodorante", "perfume", "creme hidratante", "protetor solar", "maquiagem", "perfumaria"];
@@ -111,9 +113,9 @@ function verificarItem() {
 
         const bebidas = ["bebida","bebidas", "cerveja", "refrigerante",]; // Adicionando as bebidas à lista
 
-        if (frutas.includes(item) || legumes.includes(item) || verduras.includes(item) || item.includes("flv")) {
+        if (frutas.includes(item) || legumes.includes(item) || verduras.includes(item) || flores.includes(item) || item.includes("flv")) {
             if (["1036", "1050", "1105", "1106", "1142", "1135", "1138"].includes(centroFilial)) {
-                resposta = "Marque o @FLV_SP_PR";
+                resposta = "Se tiver COMP no pedido, marque o responsável da LOJA. Se não, Marque o @FLV_SP_PR";
                 gestorResposta = "@Jully Radassa ou @Marcos";
             } else if (["1073", "1078", "1084", "1097", "1107", "1069", "1071", "1080", "1098", "1099", "1100", "1108", "1117"].includes(centroFilial)) {
                 resposta = "Marque o @FLV_SP_MIRASSOL";
@@ -123,21 +125,40 @@ function verificarItem() {
                 gestorResposta = "@Misrael ou @Thalita";
             } else if (centrosFiliaisNOR.includes(centroFilial)) {
                 resposta = "Marque o @FLV_norte";
-                gestorResposta = "@Jully Radassa ou @Marcos Gomes";
-            } else {
+                gestorResposta = "@Jully Radassa";
+            } else if(centrosFiliaisOeste.includes(centroFilial)){
+                resposta = "Verifique se o pedido é da loja. Para isso, abra a me23n, olhe se o pedido foi criado por COMP."
+            } else if(centrosFiliaisSul.includes(centroFilial)){
+                resposta = "Se o pedido for de flores, marque @FLV_SUL_FLORES. Se não, @FLV_SUL."
+                gestorResposta = "@Jully Radassa ou @Joao Batista da Silva"
+            }
+            else {
                 resposta = "Centro/Filial não reconhecido para FLV.";
             }
-        } else if (pas.includes(item)) {
+        } // fim seção FLV
+        
+        else if (pas.includes(item)) {
             if (centrosFiliaisSP.includes(centroFilial)) {
                 resposta = "Marque o @PAS_saopaulo";
-                gestorResposta = "@Noemy Rodrigues ou @João Victor Queiroz";
-            } else if (centrosFiliaisNOR.includes(centroFilial)) {
-                resposta = "Marque o @PAS_norte_cash ou @PAS_norte_varejo";
-                gestorResposta = "@David Renan";
-            }
-        } else if (carnes.includes(item)) {
+                gestorResposta = "@Noemy Nunes Rodrigues ou @Marcio Rogerio da Silva";
+            } else if (["1037", "1060", "1065", "1074", "1085", "1093", "1110", "1114", "1123"].includes(centroFilial)) {
+                resposta = "Marque o @PAS_norte_cash";
+                gestorResposta = "@David Renan ou @Marcelo Martins";
+            } else if(["1004", "1028", "1029", "1030", "1035", "1044", "1047", "1048", "1049", "1055", "1059", "1061", "1064", "1072", "1081", "1082", "1083", "1104", "1147"].includes(centroFilial)){
+                resposta = "Marque o PAS_norte_varejo";
+                gestorResposta = "@David Renan da Silva ou @Marcelo Martins";
+            } else if(centrosFiliaisSul.includes(centroFilial)){
+                resposta = "Marque o @PAS_SUL";
+                gestorResposta = "@Julia Bueno ou @Jorge Ricardo Castro.";
+            } else if(centrosFiliaisOeste.includes(centroFilial)){
+                resposta = "Marque o @Pas_e_Salsicharia"
+                gestorResposta = "@Franciele Silva de lima ou @Micaela Antônia"
+            }   
+        }// Fim da seção PAS
+
+        else if (carnes.includes(item)) {
             resposta = "Marque o @Açougue";
-            gestorResposta = "Marque o @Vitor Portela ou @Jessica Priscila Bertocco"
+            gestorResposta = "Marque o @Douglas Osni ou @Gabriel Vitor Molina"
         } else if (bazar.includes(item)) {
             resposta = "Crie a tratativa no canal do Bazar.";
         } else if (perfumaria.includes(item) || limpeza.includes(item)) {
@@ -164,7 +185,7 @@ function verificarItem() {
         let i = 0;
         const text = resposta;
         resultado.textContent = "";
-        const speed = 50; // Speed of typing effect
+        const speed = 30; // Speed of typing effect
 
         function typeWriter() {
             if (i < text.length) {
@@ -191,7 +212,7 @@ function verificarItem() {
 
             typeWriterGestor();
         }
-    }, 500); // Delay to simulate processing time
+    } ,100); // Delay to simulate processing time
 }
 
 function inicio() {
@@ -203,9 +224,9 @@ function inicio() {
         let resposta = "";
         
         if (div === "confirmações de uso" || div === "confirmação de uso" || div === "quantidade") {
-            resposta = "Por ser uma divergência que afetará a quantidade, coloque QUANTIDADE nas observações da nota.";
-        } else if (div === "valor ipi" || div === "valor fcp" || div === ipi || div === fcp || div === "ipi taxa"){
-            resposta = "Coloque TRIBUTAÇÃO (e o horário). Se o caminhão estiver no pátio, acrescente T01. Exemplo: a78 tributação T01 (horário)";
+            resposta = "Coloque QUANTIDADE nas observações da nota. Ex: a78; quantidade";
+        } else if (div === "valor ipi" || div === "valor fcp" || div === "ipi" || div === "fcp" || div === "ipi taxa"){
+            resposta = "Coloque TRIBUTAÇÃO e o horário. Se o caminhão estiver no pátio, acrescente T01. Ex: a78; tributação T01 (horário)";
         } else if (div === "valor bruto" || div === "vlr bruto" || div === "valor") {
             resposta = "Coloque preço nas observações.";
         } else if (div === "associacao manual" || div === "associação manual" || div === "associação") {
@@ -218,7 +239,7 @@ function inicio() {
         let i = 0;
         const text = resposta;
         resultado.textContent = "";
-        const speed = 50; // Speed of typing effect
+        const speed = 30; // Speed of typing effect
 
         function typeWriter() {
             if (i < text.length) {
@@ -229,7 +250,7 @@ function inicio() {
         }
 
         typeWriter();
-    }, 500); // Delay to simulate processing time
+    }, 100); // Delay to simulate processing time
 }
 
 function limparCampos() {
@@ -258,5 +279,5 @@ function voltarPaginaInicial() {
             }
         });
         container.classList.remove('fade-out');
-    }, 500); // O tempo deve corresponder à duração da animação de fade-out
+    }, 10); // O tempo deve corresponder à duração da animação de fade-out
 }

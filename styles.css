@@ -20,6 +20,7 @@ body {
     width: 350px;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
+    border: 1px solid rgb(177, 76, 76);
 }
 
 @keyframes fadeIn {
@@ -137,7 +138,7 @@ body {
 
 .logo-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     right: 20px;
 }
 
@@ -172,4 +173,9 @@ body::before {
     background-size: 200% 200%;
     z-index: -1;
     animation: gradientMovement 10s ease infinite, fadeInOut 5s ease-in-out infinite;
+}
+
+footer{
+    position: absolute;
+    bottom: 10px;
 }
