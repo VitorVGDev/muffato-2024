@@ -160,18 +160,6 @@ body {
     animation: fadeOut 0.5s forwards;
 }
 
-/* Background Animation */
-@keyframes gradientMovement {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-@keyframes fadeInOut {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 1; }
-}
-
 body::before {
     content: "";
     position: absolute;
@@ -179,7 +167,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #000000, #4e0000);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(154,6,6,1) 100%, rgba(0,0,0,1) 100%);
     background-size: 200% 200%;
     z-index: -1;
     animation: gradientMovement 10s ease infinite, fadeInOut 5s ease-in-out infinite;
