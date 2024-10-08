@@ -20,7 +20,7 @@ body {
     width: 350px;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
-    border: 1px solid rgb(177, 76, 76);
+    border: 1px solid rgb(177, 49, 49);
 }
 
 @keyframes fadeIn {
@@ -31,7 +31,7 @@ body {
 .title {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #e60000;
+    color: #da1717;
 }
 
 .label {
@@ -77,16 +77,15 @@ body {
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
-    background-color: #e60000;
-    color: #fff;
+    background-color: #e20d0d;
+    color: #ffffffd5;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(248, 67, 67, 0.1);
 }
 
 .button:hover {
-    background-color: #cc0000;
+    background-color: #e90606;
     transform: scale(1.05);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .result {

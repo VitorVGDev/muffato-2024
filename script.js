@@ -165,9 +165,22 @@ function verificarItem() {
         }// Fim da seção PAS
 
         else if (carnes.includes(item)) {
-            resposta = "Marque o @Açougue";
-            gestorResposta = "Marque o @Douglas Osni ou @Gabriel Vitor Molina"
-        } else if (bazar.includes(item)) {
+            if (centrosFiliaisSP.includes(centroFilial)){
+                resposta = "Teste SP";
+                gestorResposta = "Marque o @Douglas Osni ou @Gabriel Vitor Molina"
+            } else if(centrosFiliaisNOR.includes(centroFilial)){
+                resposta = "Teste Norte"
+                gestorResposta = ""
+            } else if(centrosFiliaisOeste.includes(centroFilial)){
+                resposta = "Teste Oeste"
+                gestorResposta = ""
+            } else if(centrosFiliaisSul.includes(centroFilial)){
+                resposta = "Teste Sul"
+                gestorResposta = ""
+            }
+        } // fim seção açougue
+        
+        else if (bazar.includes(item)) {
             resposta = "Crie a tratativa no canal do Bazar.";
         } else if (perfumaria.includes(item) || limpeza.includes(item)) {
             if (centrosFiliaisSP.includes(centroFilial)) {
